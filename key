@@ -1,4 +1,4 @@
-local keyA = "https://discord.gg/rips"
+local keyA = "discord.gg/rips"
 
 
 return keyA
