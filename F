@@ -1,2 +1,2 @@
-local key = "fuckingshitupbro"
+local correctkey = "fuckingshitupbro"
 return
